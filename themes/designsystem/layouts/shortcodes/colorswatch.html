@@ -1,0 +1,47 @@
+{{ if .IsNamedParams }}
+<div class="col-12 col-sm-4 col-md-4 col-lg-6 col-xl-4">
+
+<div class="card ds-card-color p-0">
+  <div class="ds-card-color__area bg-{{ .Get "color" }} d-flex flex-column justify-content-end position-realtive">
+      <div class="pb-8"></div>
+      <div class="ds-card-color__accessibility w-100">
+          <div class="d-flex flex-row justify-content-center w-100">
+              <div class="text-center text-dark px-1">
+                  A<br />
+                  <span class="badge badge-dark badge-pill">FAIL</span>
+              </div>
+              <div class="text-center text-dark px-1">
+                  a<br />
+                  <span class="badge badge-dark badge-pill">FAIL</span>
+              </div>
+              <div class="text-center text-white px-1">
+                  A<br />
+                  <span class="badge badge-dark badge-pill">PASS</span>
+              </div>
+              <div class="text-center text-white px-1">
+                  a<br />
+                  <span class="badge badge-dark badge-pill">PASS</span>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-12">
+              <strong>Name:</strong> {{ .Get "name" }}
+          </div>
+          <div class="col-12">
+            <strong>Variable:</strong> {{ .Get "variable" }}
+          </div>
+          <div class="col-12">
+              <strong>Hex:</strong> {{ .Get "hex" }}
+          </div>
+          <div class="col-12">
+              <strong>RGB:</strong> {{ .Get "rgb" }}
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+{{ end }}

@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ds-content {
+    flex-shrink: 0;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 71px;
+    }
+
+}
+
+.ds-content-wrapper {
+    padding: 2rem 1rem;
+    @include media-breakpoint-up(lg) {
+        padding: 2rem 3rem;
+    }
+}
+
+.ds-footer {
+    margin-top: auto;
+    padding: 2rem;
+}

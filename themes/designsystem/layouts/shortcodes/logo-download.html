@@ -1,0 +1,15 @@
+<div class="card col-12 col-sm-6 col-lg-6 col-xl-4 col-xxl-4 px-0">
+    <div class="card-header bg-light">
+        <div class="d-flex row-flex align-items-center justify-content-between">
+            <div class="h5 m-0">
+                {{ .Get "title" }}
+            </div>
+            <a href="{{ .Get "link" }}" class="btn btn-dark btn-sm px-2" download>
+                <i class="far fa-download"></i>
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <a href="{{ .Get "link" }}"><img src="{{ .Get "image" }}" alt="{{ .Get "title" }}" /></a>
+    </div>
+</div>

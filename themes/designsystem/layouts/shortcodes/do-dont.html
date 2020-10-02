@@ -1,0 +1,36 @@
+{{ if .IsNamedParams }}
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <div class="card m-0 ds-alert">
+        {{ if .Get "do-html" }}
+        <div class="ds-alert_showcase bg-gray-100 p-3">
+          {{ .Get "do-html" }}
+        </div>
+        {{ end }}
+        <div class="card-body ds-alert__description ds-alert--success p-3">
+          <h5 class="text-success">
+            <i class="fas fa-check-circle fa-xs"></i>
+            Do
+          </h5>
+          <p class="m-0">{{ .Get "do-description" }}</p>
+        </div>
+    </div>
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="card m-0 s-alert">
+        {{ if .Get "dont-html" }}
+        <div class="ds-alert_showcase bg-gray-100 p-3">
+          {{ .Get "dont-html" }}
+        </div>
+        {{ end }}
+        <div class="card-body ds-alert__description ds-alert--danger p-3">
+          <h5 class="text-danger">
+            <i class="fas fa-times-circle fa-xs"></i>
+            Don't Do
+          </h5>
+          <p class="m-0">{{ .Get "dont-description" }}</p>
+        </div>
+    </div>
+  </div>
+</div>
+{{ end }}

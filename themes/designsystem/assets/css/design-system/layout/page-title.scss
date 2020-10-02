@@ -1,0 +1,15 @@
+.ds-page-title {
+    background-color: $gray-800;
+    padding: 1.3rem 1rem;
+
+    @include media-breakpoint-up(lg) {
+            min-height: 300px;
+            padding: 2rem 3rem;
+    }
+
+    h1,
+    .ds-page-description {
+        color: $white;
+    }
+
+}

@@ -1,0 +1,46 @@
+<html lang="en">
+    {{ partial "head" . }}
+  <body>
+    {{ partial "navigation" . }}
+
+    <div class="ds-content">
+        {{ partial "mobile-search" . }}
+
+        <div class="row no-gutters">
+            <aside class="sidebar col-12 col-lg-2 d-lg-block collapse" id="ds-docs-nav">
+                {{ partial "sidebar" . }}
+            </aside>
+            <main class="col-12 col-lg-10">
+                {{ partial "pagetitle" . }}
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <div class="ds-content-wrapper">
+                            <div class="row">
+                            {{ $sectionPages := where .Site.RegularPages "Section" .Section }}
+                            {{ if ge (len $sectionPages) 1 }}
+                                {{ range $sectionPages }}
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="card hover-translate-y-n3">
+                                        <div class="card-header">
+                                            {{ .Title }}
+                                        </div>
+                                        <div class="">
+                                            <img src="{{ .Page.Params.LandingImage }}" class="img-fluid" alt="{{ .Title }} Image"/>
+                                            <a href="{{ .Permalink }}" class="stretched-link"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ end }}
+                            {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    {{ partial "footer" . }}
+
+    {{ partial "footer-scripts" . }}
+  </body>
+</html>

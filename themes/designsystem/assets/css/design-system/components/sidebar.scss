@@ -1,0 +1,31 @@
+.sidebar {
+    border-right: 1px solid $gray-300;
+
+    .sidebar__title {
+        text-transform: capitalize;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .list-group-item {
+        position: relative;
+        padding-left: 2rem;
+
+        &.active {
+            background-color: $gray-200;
+            border-color: $gray-200;
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 6px;
+                background: $primary;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+}

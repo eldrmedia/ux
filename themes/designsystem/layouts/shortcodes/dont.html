@@ -1,0 +1,18 @@
+{{ if .IsNamedParams }}
+  <div class="col-12 col-lg-6">
+    <div class="card s-alert">
+        {{ if .Get "dont-html" }}
+        <div class="ds-alert_showcase bg-gray-100 p-3">
+          <img src="/images/foundation/logo/{{ .Get "dont-html" }}.jpg" class="img-fluid" />
+        </div>
+        {{ end }}
+        <div class="card-body ds-alert__description ds-alert--danger p-3">
+          <h5 class="text-danger">
+            <i class="fas fa-times-circle fa-xs"></i>
+            Don't Do
+          </h5>
+          <p class="m-0">{{ .Get "dont-description" }}</p>
+        </div>
+    </div>
+  </div>
+{{ end }}

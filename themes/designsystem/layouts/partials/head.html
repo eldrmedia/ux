@@ -1,0 +1,43 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    {{ if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:title" content="{{ .Site.Title | truncate 70 }}" />
+    <meta name="description" content="{{ .Description }}">
+    <meta property="og:description" content="{{ .Description }}">
+    <meta name="twitter:description" content="{{ .Description | truncate 200 }}">
+    {{- else -}}
+    <title>{{ .Title }} – {{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}" />
+    <meta name="twitter:title" content="{{ .Title }} - {{ .Site.Title | truncate 70 }}" />
+    <meta name="description" content="{{ .Description }}">
+    <meta property="og:description" content="{{ .Description }}">
+    <meta name="twitter:description" content="{{ .Description | truncate 200 }}">
+    {{- end }}
+
+    <meta name="author" content="{{ .Site.Author.name }}"/>
+    <link href='{{ "" | absLangURL }}/images/favicon.ico' rel='icon' type='image/x-icon'/>
+
+    <meta property="og:url" content="{{ .URL | absLangURL }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:image" content='{{ "" | absLangURL }}/images/og-image.jpg' />
+    <link rel="canonical" href="{{ .URL | absLangURL }}" />
+
+    {{ "<!-- Main Stylesheet -->" | safeHTML }}
+    {{ $roll20 := resources.Get "/css/roll20.scss" | toCSS | minify }}
+    {{ $roll20_dark := resources.Get "/css/roll20-dark.scss" | toCSS | minify }}
+    <link rel="stylesheet" href="{{ $roll20_dark.Permalink }}" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="{{ $roll20.Permalink }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+
+    {{ $designsystem := resources.Get "/css/design-system.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $designsystem.Permalink }}" media="screen">
+
+    {{ "<!-- plugins -->" | safeHTML }}
+    {{ range .Site.Params.plugins.css }}
+    <link rel="stylesheet" href="{{ .link | absURL }}">
+    {{ end }}
+</head>

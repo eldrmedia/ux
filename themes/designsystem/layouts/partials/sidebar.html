@@ -1,0 +1,18 @@
+<div class="sidebar-wrapper">
+    <div class="px-3 pt-3 d-none d-lg-block">
+        <form class="m-0 d-flex justify-content-between" action="{{ `search` | relLangURL }}">
+            <input id="search-by" name="s" type="search" class="form-control form-control-sm" placeholder="Search" autocomplete="off">
+        </form>
+    </div>
+    <h6 class="sidebar__title">{{ .Page.Params.Directory }}</h6>
+    {{ $sectionPages := where .Site.RegularPages "Section" .Section }}
+    {{ $url := .URL }}
+
+    {{ if ge (len $sectionPages) 1 }}
+    <ul class="list-group list-group-sm list-group-flush">
+        {{ range $sectionPages }}
+        <li><a href="{{ .Permalink }}" class="list-group-item list-group-item-action{{ if eq $url .URL  }} active text-dark{{ end }}"}>{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>

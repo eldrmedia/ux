@@ -1,0 +1,220 @@
+// Bootstrap functions
+@import "../../static/plugins/bootstrap/4.3.1/scss/functions";
+@import "../../static/plugins/bootstrap/4.3.1/scss/mixins";
+
+// Custom variables
+@import "roll20/fonts/variables";
+
+// Roll20 functions
+@import "roll20/functions";
+@import "roll20/variables";
+
+// Highlighting
+@import "design-system/libs/hightlight-atom-one-dark";
+
+// Design System Specific
+@import "design-system/components/table-of-contents";
+@import "design-system/components/header";
+@import "design-system/components/sidebar";
+
+
+@import "design-system/layout/layout";
+@import "design-system/layout/page-title";
+@import "design-system/layout/typography";
+
+
+
+
+.ds-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid $border-color;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+
+    &-warning {
+        border-left-color: $warning;
+    }
+
+    ul, ol {
+      margin: 0;
+    }
+
+}
+
+
+.masthead {
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 1rem;
+      padding-bottom: 6rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 10rem 0;
+    }
+
+    &__content {
+        padding: 2rem 0 11rem 0;
+        text-align: center;
+    }
+
+    &--with-header {
+        // margin-top: - 71px;
+    }
+
+    h1, p {
+        color: $white !important;
+    }
+
+}
+
+
+.section-columns {
+    background: none;
+    position: relative;
+    z-index: 100;
+    margin-top: -12rem;
+}
+
+.section-resources {
+
+    &__wrapper {
+        border-radius: $border-radius-xl;
+    }
+}
+
+
+
+// autocomplete
+.autocomplete-suggestions {
+    border: 0;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0px 50px 60px rgba(62, 62, 62, 0.102) !important;
+    background: $white;
+  
+    &::-webkit-scrollbar {
+      width: 5px;
+      &-track {
+        background: $body-bg; 
+      }
+      &-thumb {
+        background: $border-color; 
+      }
+    }
+  
+    .autocomplete-suggestion {
+      transition: .2s ease;
+      padding: 10px;
+      font-weight: 500;
+  
+      &.selected {
+        background: $primary;
+      }
+    }
+  }
+  
+  
+  .search-item {
+    a {
+      display: block;
+  
+      &:hover {
+        color: $primary;
+      }
+    }
+  
+    &:not(:last-child) {
+    }
+  }
+
+
+  .ds-mobile-search {
+    .btn {
+      svg {
+        width: auto !important;
+      }
+    }
+  }
+
+
+.ds-code-example {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background: url('/images/transp_bg.png');
+  margin-bottom: 2rem;
+
+  .ds-code-example__showcase {
+    position: relative;
+    padding: 1rem;
+  }
+
+  .ds-code-example__code {
+    position: relative;
+    .highlight {
+      padding-top: 2rem;
+      border-bottom-right-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      overflow: hidden;
+      pre {
+        margin: 0;
+      }
+    }
+  }
+
+  .action-item.btn-clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #FFF;
+    color: #273444;
+    border: 0;
+    border-left: 1px solid #EFF2F7;
+    border-bottom: 1px solid #EFF2F7;
+    border-radius: 0 0 0 4px;
+  }
+
+}
+
+
+.ds-card-color {
+
+  &__accessibility {
+    margin-bottom: 1rem;
+
+    .badge {
+      font-size: .6rem;
+    }
+  }
+}
+
+
+.ds-alert {
+  border-radius: $border-radius;
+
+  &--danger {
+    background-color: rgba($danger, 0.1);
+    border-top: 3px solid $danger;
+  }
+
+  &--success {
+    background-color: rgba($success, 0.1);
+    border-top: 3px solid $success;
+  }
+
+}
+
+
+.ds-logo-display {
+  &__image {
+    background: url('/images/transp_bg.png');
+  }
+}

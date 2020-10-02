@@ -1,0 +1,27 @@
+h2[id]:not(:nth-of-type(1)) {
+    margin-top: 60px;
+}
+
+h3[id], h4[id] {
+    margin-top: 50px;
+}
+
+h4[id] {
+    margin-top: 20px;
+}
+
+h2:hover .heading-hash,
+h3:hover .heading-hash,
+h4:hover .heading-hash {
+    opacity: 1;
+    visibility: visible;
+}
+
+.heading-hash {
+    opacity: 0;
+    visibility: hidden;
+    color: $gray-700;
+    margin-left: 6px;
+    position: relative;
+    transition: opacity .3s;
+}

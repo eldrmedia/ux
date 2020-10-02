@@ -1,0 +1,987 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Roll20.net">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>Buttons - Roll20 Pattern Library</title>
+
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+     <link rel="shortcut icon" href="../../assets/img/brand/favicon.png">
+
+
+  <!--
+    You can include external assets of course, but be aware that it means the
+    documentation may not work well offline.
+  -->
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="../../assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="../../assets/css/roll20.css" id="stylesheet">
+  <!-- Docs CSS - used only for demo -->
+  <link rel="stylesheet" href="../../assets/css/docs.css">
+
+  <!--
+    extra_ess contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  <!--
+    To include static assets from our theme, just add
+    ../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script src="../../js/theme.js"></script>
+
+  
+  
+
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../search/main.js"></script>
+  
+
+  <!--
+    Include Google Analytics tracking code.
+
+    http://www.mkdocs.org/user-guide/configuration/#google_analytics
+  -->
+  
+
+</head>
+
+<body class="docs g-sidenav-show g-sidenav-pinned">
+  <!-- Nav -->
+  <header class="header fixed-top border-bottom">
+    <!-- Nav -->
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <!-- Brand logo -->
+        <a class="navbar-brand" href="https://roll20.github.io/style-guide/">
+          <img alt="Image placeholder" src="../../assets/img/brand/dark.png" id="navbar-logo" style="width: 120px;">
+        </a>
+        <!-- Sidenav toggler -->
+        <button class="sidenav-toggler ml-auto mr-3" type="button" data-action="sidenav-pin" data-target="#sidenav-main">
+          <div class="sidenav-toggler-inner">
+            <i class="sidenav-toggler-line"></i>
+            <i class="sidenav-toggler-line"></i>
+            <i class="sidenav-toggler-line"></i>
+          </div>
+        </button>
+        <!-- Search form -->
+        <form class="navbar-search navbar-search-dark form-inline mr-sm-3 d-none" id="navbar-search-main">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-merge">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+              </div>
+              <input class="form-control" placeholder="Search" type="text">
+            </div>
+          </div>
+          <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </form>
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/introduction.md">Introduction</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Visit Roll20.net</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidenav -->
+  <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="px-3 scrollbar-inner">
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Navigation -->
+        <ul class="navbar-nav navbar-nav-docs">
+          
+            <!--
+
+-->
+
+  <li class="nav-item">
+    <a class="nav-link" href="#navbar-Foundation" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-Foundation">
+        Foundation
+    </a>
+    <div class="collapse show" id="navbar-Foundation">
+        <ul class="nav flex-column">
+            
+          <li class="nav-item">
+              
+              
+              <a href="../../foundation/accessibility/" class="nav-link">Accessibility</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../../foundation/colors/" class="nav-link">Colors</a>
+              
+          </li>
+          
+        </ul>
+    </div>
+  </li>
+
+          
+            <!--
+
+-->
+
+  <li class="nav-item">
+    <a class="nav-link" href="#navbar-Components" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-Components">
+        Components
+    </a>
+    <div class="collapse show" id="navbar-Components">
+        <ul class="nav flex-column">
+            
+          <li class="nav-item">
+              
+              
+              <a href="../alerts/" class="nav-link">Alerts</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../breadcrumb/" class="nav-link">Breadcrumb</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a href="./" class="nav-link active">Buttons</a>
+              
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../cards/" class="nav-link">Cards</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../collapse/" class="nav-link">Collapse</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../forms/" class="nav-link">Forms</a>
+              
+          </li>
+          
+        </ul>
+    </div>
+  </li>
+
+          
+            <!--
+
+-->
+
+  <li class="nav-item">
+    <a class="nav-link" href="#navbar-Patterns" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-Patterns">
+        Patterns
+    </a>
+    <div class="collapse show" id="navbar-Patterns">
+        <ul class="nav flex-column">
+            
+          <li class="nav-item">
+              
+              
+              <a href="../../patterns/login/" class="nav-link">Login</a>
+              
+          </li>
+          
+        </ul>
+    </div>
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <!-- Page content -->
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-lg-9">
+          <div class="docs-content">
+            
+              <h2 id="buttons">Buttons</h2>
+<p class="text-muted docs-lead">
+    Button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+</p>
+
+<p><a href="https://getbootstrap.com/docs/4.3/components/buttons/" target="_blank">
+    <i class="fas fa-book mr-2"></i> Bootstrap Documentation
+</a></p>
+<hr />
+
+<h2 id="examples">Examples</h2>
+<h3 id="default">Default</h3>
+<p><div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="buttons-result-tab" data-toggle="tab" href="#buttons-result" role="tab" aria-controls="buttons-result" aria-selected="true">
+            <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="buttons-html-tab" data-toggle="tab" href="#buttons-html" role="tab" aria-controls="buttons-html" aria-selected="false">
+            <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="buttons-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="buttons-result-tab">
+            <button type="button" class="btn btn-primary">
+            Primary
+            </button>
+            <button type="button" class="btn btn-secondary">
+            Secondary
+            </button>
+            <button type="button" class="btn btn-tertiary">
+            Tertiary
+            </button>
+            <button type="button" class="btn btn-success">
+            Success
+            </button>
+            <button type="button" class="btn btn-danger">
+            Danger
+            </button>
+            <button type="button" class="btn btn-warning">
+            Warning
+            </button>
+            <button type="button" class="btn btn-dark">
+            Dark
+            </button>
+            <button type="button" class="btn btn-link">Link</button>
+        </div>
+        <!-- Code -->
+        <div id="buttons-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="buttons-html-tab">
+            <figure class="highlight">
+                <pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
+</code></pre>
+            </figure>
+        </div>
+    </div>
+</div></p>
+<h3 id="tags">Tags</h3>
+<p><div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-tags-result-tab" data-toggle="tab" href="#button-tags-result" role="tab" aria-controls="button-tags-result" aria-selected="true">
+            <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-tags-html-tab" data-toggle="tab" href="#button-tags-html" role="tab" aria-controls="button-tags-html" aria-selected="false">
+            <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-tags-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-tags-result-tab">
+            <a class="btn btn-primary" href="#" role="button">Link</a>
+            <button class="btn btn-primary" type="submit">Button</button>
+            <input class="btn btn-primary" type="button" value="Input" />
+            <input class="btn btn-primary" type="submit" value="Submit" />
+            <input class="btn btn-primary" type="reset" value="Reset" />
+        </div>
+        <!-- Code -->
+        <div id="button-tags-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-tags-html-tab">
+            <figure class="highlight">
+                <pre><code class="language-html" data-lang="html">&lt;a class=&quot;btn btn-primary&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link&lt;/a&gt;
+&lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;Button&lt;/button&gt;
+&lt;input class=&quot;btn btn-primary&quot; type=&quot;button&quot; value=&quot;Input&quot; /&gt;
+&lt;input class=&quot;btn btn-primary&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;input class=&quot;btn btn-primary&quot; type=&quot;reset&quot; value=&quot;Reset&quot; /&gt;
+</code></pre>
+            </figure>
+        </div>
+    </div>
+</div></p>
+<h2 id="outline">Outline</h2>
+<p><p>
+    Replace the default modifier classes with <code>.btn-outline-*</code> to remove all background images and colors on any button.
+</p>
+<div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-outline-result-tab" data-toggle="tab" href="#button-outline-result" role="tab" aria-controls="button-outline-result" aria-selected="true">
+            <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-outline-html-tab" data-toggle="tab" href="#button-outline-html" role="tab" aria-controls="button-outline-html" aria-selected="false">
+            <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-outline-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-outline-result-tab">
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-outline-success">Success</button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+        </div>
+        <!-- Code -->
+        <div id="button-outline-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-outline-html-tab">
+            <figure class="highlight">
+                <pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-success&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-info&quot;&gt;Info&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-dark&quot;&gt;Dark&lt;/button&gt;
+</code></pre>
+            </figure>
+        </div>
+    </div>
+</div></p>
+<h2 id="app">App</h2>
+<p><div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-app-result-tab" data-toggle="tab" href="#button-app-result" role="tab" aria-controls="button-app-result" aria-selected="true">
+            <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-app-html-tab" data-toggle="tab" href="#button-app-html" role="tab" aria-controls="button-app-html" aria-selected="false">
+            <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-app-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-app-result-tab">
+            <button type="button" class="btn btn-app-store">
+                <i class="fab fa-apple"></i>
+                <span class="btn-inner--text">Download on the</span>
+                <span class="btn-inner--brand">App Store</span>
+            </button>
+            <button type="button" class="btn btn-app-store">
+                <i class="fab fa-google-play"></i>
+                <span class="btn-inner--text">Download on the</span>
+                <span class="btn-inner--brand">Play Store</span>
+            </button>
+        </div>
+        <!-- Code -->
+        <div id="button-app-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-app-html-tab">
+            <figure class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-app-store&quot;&gt;
+    &lt;i class=&quot;fab fa-apple&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Download on the&lt;/span&gt;
+    &lt;span class=&quot;btn-inner--brand&quot;&gt;App Store&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-app-store&quot;&gt;
+    &lt;i class=&quot;fab fa-google-play&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Download on the&lt;/span&gt;
+    &lt;span class=&quot;btn-inner--brand&quot;&gt;Play Store&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+            </figure>
+        </div>
+    </div>
+</div></p>
+<h2 id="icon">Icon</h2>
+<p><p>Add <code>.btn-icon-only</code> to make an icon button with equal padding all around</p>
+<h3 id="simple">Simple</h3>
+<div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-icon-simple-result-tab" data-toggle="tab" href="#button-icon-simple-result" role="tab" aria-controls="button-icon-simple-result" aria-selected="true">
+                <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-icon-simple-html-tab" data-toggle="tab" href="#button-icon-simple-html" role="tab" aria-controls="button-icon-simple-html" aria-selected="false">
+                <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-icon-simple-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-icon-simple-result-tab">
+            <button type="button" class="btn btn-primary btn-icon-only">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-user"></i>
+                    </span>
+            </button>
+            <button type="button" class="btn btn-secondary btn-icon-only">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-arrow-left"></i>
+                </span>
+            </button>
+            <button type="button" class="btn btn-danger btn-icon-only">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-trash-alt"></i>
+                </span>
+            </button>
+        </div>
+        <!-- Code -->
+        <div id="button-icon-simple-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-icon-simple-html-tab">
+            <figure class="highlight">
+<pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-icon-only&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary btn-icon-only&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-arrow-left&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger btn-icon-only&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-icon-only-circle-result-tab" data-toggle="tab" href="#button-icon-only-circle-result" role="tab" aria-controls="button-icon-only-circle-result" aria-selected="true">
+                <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-icon-only-circle-html-tab" data-toggle="tab" href="#button-icon-only-circle-html" role="tab" aria-controls="button-icon-only-circle-html" aria-selected="false">
+                <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-icon-only-circle-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-icon-only-circle-result-tab">
+            <button type="button" class="btn btn-primary rounded-circle btn-icon-only">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-user"></i>
+                </span>
+            </button>
+            <button type="button" class="btn btn-secondary rounded-circle btn-icon-only">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-arrow-left"></i>
+                </span>
+            </button>
+            <button type="button" class="btn btn-danger rounded-circle btn-icon-only">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-trash-alt"></i>
+                </span>
+            </button>
+        </div>
+        <!-- Code -->
+        <div id="button-icon-only-circle-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-icon-only-circle-html-tab">
+        <figure class="highlight">
+<pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary rounded-circle btn-icon-only&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary rounded-circle btn-icon-only&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-arrow-left&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger rounded-circle btn-icon-only&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+        </figure>
+        </div>
+    </div>
+</div>
+
+<h2 id="text">Text</h2>
+<p><div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-icon-text-l-result-tab" data-toggle="tab" href="#button-icon-text-l-result" role="tab" aria-controls="button-icon-text-l-result" aria-selected="true">
+            <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-icon-text-l-html-tab" data-toggle="tab" href="#button-icon-text-l-html" role="tab" aria-controls="button-icon-text-l-html" aria-selected="false">
+            <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-icon-text-l-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-icon-text-l-result-tab">
+            <button type="button" class="btn btn-primary btn-icon">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-user"></i>
+                </span>
+                <span class="btn-inner--text">Create account</span>
+            </button>
+            <button type="button" class="btn btn-danger btn-icon">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-user-times"></i>
+                </span>
+                <span class="btn-inner--text">Deactivate</span>
+            </button>
+        </div>
+        <!-- Code -->
+        <div id="button-icon-text-l-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-icon-text-l-html-tab">
+            <figure class="highlight">
+<pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-icon&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Create account&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger btn-icon&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-user-times&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Deactivate&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+            </figure>
+        </div>
+    </div>
+</div>
+<div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-icon-text-r-result-tab" data-toggle="tab" href="#button-icon-text-r-result" role="tab" aria-controls="button-icon-text-r-result" aria-selected="true">
+            <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-icon-text-r-html-tab" data-toggle="tab" href="#button-icon-text-r-html" role="tab" aria-controls="button-icon-text-r-html" aria-selected="false">
+            <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-icon-text-r-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-icon-text-r-result-tab">
+            <button type="button" class="btn btn-primary btn-icon">
+            <span class="btn-inner--text">Create account</span>
+                <span class="btn-inner--icon">
+                    <i class="fas fa-user"></i>
+                </span>
+            </button>
+            <button type="button" class="btn btn-danger btn-icon">
+                <span class="btn-inner--text">Deactivate</span>
+                <span class="btn-inner--icon">
+                    <i class="fas fa-user-times"></i>
+                </span>
+            </button>
+        </div>
+        <!-- Code -->
+        <div id="button-icon-text-r-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-icon-text-r-html-tab">
+            <figure class="highlight">
+                <pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-icon&quot;&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Create account&lt;/span&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger btn-icon&quot;&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Deactivate&lt;/span&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-user-times&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</code></pre>
+            </figure>
+        </div>
+    </div>
+</div></p>
+<h2 id="label">Label</h2>
+<p><div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="buttons-icon-label-l-result-tab" data-toggle="tab" href="#buttons-icon-label-l-result" role="tab" aria-controls="buttons-icon-label-l-result" aria-selected="true">
+            <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="buttons-icon-label-l-html-tab" data-toggle="tab" href="#buttons-icon-label-l-html" role="tab" aria-controls="buttons-icon-label-l-html" aria-selected="false">
+            <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="buttons-icon-label-l-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="buttons-icon-label-l-result-tab">
+            <button type="button" class="btn btn-primary btn-icon-label">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="btn-inner--text">Create New Game</span>
+            </button>
+            <button type="button" class="btn btn-dark btn-icon-label">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-play"></i>
+                </span>
+                <span class="btn-inner--text">Join a Game</span>
+            </button>
+            <button type="button" class="btn btn-danger btn-icon-label">
+                <span class="btn-inner--icon">
+                    <i class="fas fa-times"></i>
+                </span>
+                <span class="btn-inner--text">Delete Game</span>
+            </button>
+        </div>
+        <!-- Code -->
+        <div id="buttons-icon-label-l-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="buttons-icon-label-l-html-tab">
+            <figure class="highlight">
+                <pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-icon-label&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-play&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Play now&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-dark btn-icon-label&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-shopping-cart&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Add to cart&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger btn-icon-label&quot;&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Delete item&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+            </figure>
+        </div>
+    </div>
+</div>
+<div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="buttons-icon-label-r-result-tab" data-toggle="tab" href="#buttons-icon-label-r-result" role="tab" aria-controls="buttons-icon-label-r-result" aria-selected="true">
+            <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="buttons-icon-label-r-html-tab" data-toggle="tab" href="#buttons-icon-label-r-html" role="tab" aria-controls="buttons-icon-label-r-html" aria-selected="false">
+            <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="buttons-icon-label-r-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="buttons-icon-label-r-result-tab">
+            <button type="button" class="btn btn-primary btn-icon-label">
+                <span class="btn-inner--text">Create New Game</span>
+                <span class="btn-inner--icon">
+                    <i class="fas fa-chevron-right"></i>
+                    </span>
+            </button>
+            <button type="button" class="btn btn-secondary btn-icon-label">
+                <span class="btn-inner--text">Join a Game</span>
+                <span class="btn-inner--icon">
+                    <i class="fas fa-play"></i>
+                </span>
+            </button>
+            <button type="button" class="btn btn-danger btn-icon-label">
+                <span class="btn-inner--text">Delete Game</span>
+                <span class="btn-inner--icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </button>
+        </div>
+        <!-- Code -->
+        <div id="buttons-icon-label-r-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="buttons-icon-label-r-html-tab">
+            <figure class="highlight">
+                <pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-icon-label&quot;&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Play now&lt;/span&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-play&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-dark btn-icon-label&quot;&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Add to cart&lt;/span&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-shopping-cart&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger btn-icon-label&quot;&gt;
+    &lt;span class=&quot;btn-inner--text&quot;&gt;Delete item&lt;/span&gt;
+    &lt;span class=&quot;btn-inner--icon&quot;&gt;
+        &lt;i class=&quot;fas fa-trash-alt&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</code></pre>
+            </figure>
+        </div>
+    </div>
+</div></p>
+<h2 id="options">Options</h2>
+<h3 id="sizes">Sizes</h3>
+<div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-sizing-result-tab" data-toggle="tab" href="#button-sizing-result" role="tab" aria-controls="button-sizing-result" aria-selected="true">
+                <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-sizing-html-tab" data-toggle="tab" href="#button-sizing-html" role="tab" aria-controls="button-sizing-html" aria-selected="false">
+                <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-sizing-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-sizing-result-tab">
+            <button type="button" class="btn btn-primary btn-sm">Small</button>
+            <button type="button" class="btn btn-primary">Default</button>
+            <button type="button" class="btn btn-primary btn-lg">Large</button>
+            <button type="button" class="btn btn-primary btn-xl">Extra large</button>
+        </div>
+        <!-- Code -->
+        <div id="button-sizing-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-sizing-html-tab">
+            <figure class="highlight">
+<pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Small&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Default&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Large&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-xl&quot;&gt;Extra large&lt;/button&gt;
+</code></pre>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<h3 id="states">States</h3>
+<div class="docs-example">
+    <ul class="nav nav-pills nav-example" id="tab-example" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="button-states-result-tab" data-toggle="tab" href="#button-states-result" role="tab" aria-controls="button-states-result" aria-selected="true">
+                <i class="fas fa-eye mr-2"></i>Result
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="button-states-html-tab" data-toggle="tab" href="#button-states-html" role="tab" aria-controls="button-states-html" aria-selected="false">
+                <i class="fas fa-code mr-2"></i>HTML
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <!-- Result -->
+        <div id="button-states-result" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="button-states-result-tab">
+            <button type="button" class="btn btn-primary active">Active</button>
+            <button type="button" class="btn btn-secondary active">Active</button>
+            <button type="button" class="btn btn-primary" disabled="">Disabled</button>
+            <button type="button" class="btn btn-secondary" disabled="">Disabled</button>
+            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Single toggle</button>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-spinner fa-spin"></i>
+            </button>
+            <button type="button" class="btn btn-secondary">
+                <i class="fas fa-spinner fa-spin"></i>
+            </button>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-circle-notch fa-spin"></i>
+            </button>
+            <button type="button" class="btn btn-secondary">
+                <i class="fas fa-circle-notch fa-spin"></i>
+            </button>
+        </div>
+        <!-- Code -->
+        <div id="button-states-html" class="tab-pane tab-example-html fade" role="tabpanel" aria-labelledby="button-states-html-tab">
+            <figure class="highlight">
+<pre><code class="language-html" data-lang="html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary active&quot;&gt;Active&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary active&quot;&gt;Active&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled=&quot;&quot;&gt;Disabled&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; disabled=&quot;&quot;&gt;Disabled&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;button&quot; aria-pressed=&quot;false&quot; autocomplete=&quot;off&quot;&gt;Single toggle&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;
+    &lt;i class=&quot;fas fa-spinner fa-spin&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;
+    &lt;i class=&quot;fas fa-spinner fa-spin&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;
+    &lt;i class=&quot;fas fa-circle-notch fa-spin&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;
+    &lt;i class=&quot;fas fa-circle-notch fa-spin&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+</code></pre>
+            </figure>
+        </div>
+    </div>
+</div>
+            
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3 border-left">
+          <div class="h-100 p-4">
+            <div data-toggle="sticky" data-sticky-offset="120">
+              <h6 class="mb-3">Summary</h6>
+              <ul class="section-nav">
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#buttons">Buttons</a>
+                      <ul>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#examples">Examples</a>
+                      <ul>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#default">Default</a>
+                            </li>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#tags">Tags</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#outline">Outline</a>
+                      <ul>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#app">App</a>
+                      <ul>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#icon">Icon</a>
+                      <ul>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#simple">Simple</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#text">Text</a>
+                      <ul>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#label">Label</a>
+                      <ul>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#options">Options</a>
+                      <ul>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#sizes">Sizes</a>
+                            </li>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#states">States</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  MkDocs version      : 1.0.4
+  Docs Build Date UTC : 2019-07-30 19:56:35
+  -->
+
+  <!-- Purpose Scripts -->
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="../../assets/js/roll20.core.js"></script>
+  <!-- Docs JS -->
+  <script src="../../assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="../../assets/libs/clipboard/dist/clipboard.min.js"></script>
+  <!-- Purpose JS -->
+  <script src="../../assets/js/roll20.js"></script>
+</body>
+</html>

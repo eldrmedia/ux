@@ -1,0 +1,19 @@
+<div class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-6 col-xl-4 col-xxl-4 col-xxxl-3">
+    <div class="ds-logo-display border rounded mt-5">
+        <div class="ds-logo-display__image">
+            <img src="{{ .Get "image" }}" class="img-fluid" />
+        </div>
+        <div class="logo-display__body p-3">
+            <span class="h5">{{ .Get "title" }}</span><br />
+            <span class="text-muted small">{{ .Get "subtitle" }}</span>
+            <!-- <div class="mt-3 row text-center">
+                <div class="col">
+                    <a href="{{ .Get "png" }}" class="btn btn-sm btn-link btn-block" target="_blank" download>PNG</a>
+                </div>
+                <div class="col">
+                    <a href="{{ .Get "eps" }}" class="btn btn-sm btn-link btn-block" target="_blank" download>EPS</a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.table-of-contents {
+    border-left: 1px solid $gray-300;
+    padding-left: 1rem;
+    padding-top: 2rem;
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+
+            a {
+                color: $body-color;
+                font-size: $small-font-size;
+            }
+
+            & ul li {
+                padding-left: 1rem;
+            }
+
+        }
+
+    }
+
+}

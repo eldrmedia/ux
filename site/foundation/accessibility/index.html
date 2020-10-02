@@ -1,0 +1,438 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Roll20.net">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>Accessibility - Roll20 Pattern Library</title>
+
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+     <link rel="shortcut icon" href="../../assets/img/brand/favicon.png">
+
+
+  <!--
+    You can include external assets of course, but be aware that it means the
+    documentation may not work well offline.
+  -->
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="../../assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="../../assets/css/roll20.css" id="stylesheet">
+  <!-- Docs CSS - used only for demo -->
+  <link rel="stylesheet" href="../../assets/css/docs.css">
+
+  <!--
+    extra_ess contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  <!--
+    To include static assets from our theme, just add
+    ../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script src="../../js/theme.js"></script>
+
+  
+  
+
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../search/main.js"></script>
+  
+
+  <!--
+    Include Google Analytics tracking code.
+
+    http://www.mkdocs.org/user-guide/configuration/#google_analytics
+  -->
+  
+
+</head>
+
+<body class="docs g-sidenav-show g-sidenav-pinned">
+  <!-- Nav -->
+  <header class="header fixed-top border-bottom">
+    <!-- Nav -->
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <!-- Brand logo -->
+        <a class="navbar-brand" href="https://roll20.github.io/style-guide/">
+          <img alt="Image placeholder" src="../../assets/img/brand/dark.png" id="navbar-logo" style="width: 120px;">
+        </a>
+        <!-- Sidenav toggler -->
+        <button class="sidenav-toggler ml-auto mr-3" type="button" data-action="sidenav-pin" data-target="#sidenav-main">
+          <div class="sidenav-toggler-inner">
+            <i class="sidenav-toggler-line"></i>
+            <i class="sidenav-toggler-line"></i>
+            <i class="sidenav-toggler-line"></i>
+          </div>
+        </button>
+        <!-- Search form -->
+        <form class="navbar-search navbar-search-dark form-inline mr-sm-3 d-none" id="navbar-search-main">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-merge">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+              </div>
+              <input class="form-control" placeholder="Search" type="text">
+            </div>
+          </div>
+          <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </form>
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/introduction.md">Introduction</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Visit Roll20.net</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sidenav -->
+  <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="px-3 scrollbar-inner">
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Navigation -->
+        <ul class="navbar-nav navbar-nav-docs">
+          
+            <!--
+
+-->
+
+  <li class="nav-item">
+    <a class="nav-link" href="#navbar-Foundation" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-Foundation">
+        Foundation
+    </a>
+    <div class="collapse show" id="navbar-Foundation">
+        <ul class="nav flex-column">
+            
+          <li class="nav-item">
+              
+              <a href="./" class="nav-link active">Accessibility</a>
+              
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../colors/" class="nav-link">Colors</a>
+              
+          </li>
+          
+        </ul>
+    </div>
+  </li>
+
+          
+            <!--
+
+-->
+
+  <li class="nav-item">
+    <a class="nav-link" href="#navbar-Components" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-Components">
+        Components
+    </a>
+    <div class="collapse show" id="navbar-Components">
+        <ul class="nav flex-column">
+            
+          <li class="nav-item">
+              
+              
+              <a href="../../components/alerts/" class="nav-link">Alerts</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../../components/breadcrumb/" class="nav-link">Breadcrumb</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../../components/buttons/" class="nav-link">Buttons</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../../components/cards/" class="nav-link">Cards</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../../components/collapse/" class="nav-link">Collapse</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              
+              <a href="../../components/forms/" class="nav-link">Forms</a>
+              
+          </li>
+          
+        </ul>
+    </div>
+  </li>
+
+          
+            <!--
+
+-->
+
+  <li class="nav-item">
+    <a class="nav-link" href="#navbar-Patterns" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-Patterns">
+        Patterns
+    </a>
+    <div class="collapse show" id="navbar-Patterns">
+        <ul class="nav flex-column">
+            
+          <li class="nav-item">
+              
+              
+              <a href="../../patterns/login/" class="nav-link">Login</a>
+              
+          </li>
+          
+        </ul>
+    </div>
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <!-- Page content -->
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-lg-9">
+          <div class="docs-content">
+            
+              <h2 id="accessibility">Accessibility</h2>
+<p><p class="lead">
+    Products and web properties should be accessible to everyone, including those with vision, hearing, cognitive, or motor impairments. Accessible design lets people of all abilities interact with, understand, and navigate our products.
+</p></p>
+<p>Keep in mind that:</p>
+<ul>
+<li>Accessibility is about having a good understanding of our user's journeys and proactively anticipating their needs.</li>
+<li>Accessible design is everyone's responsibility, from information and user experience design, through development, and on into help and support.</li>
+</ul>
+<hr />
+<h2 id="structure-hierarchy">Structure &amp; hierarchy</h2>
+<p>Consistent, clear hierarchy helps users who navigate the page using links or headers. Use headings and titles to outline the page so that users can see the structure and how the sections relate. Give users feedback so they know where they are in the application.</p>
+<h3 id="have-a-consistent-hierarchy">Have a consistent hierarchy</h3>
+<p>Create and maintain a consistent hierarchy so that users can use alternative input methods to move through the page. Headings are in order without skipping levels.</p>
+<ul>
+<li><strong>Do:</strong> H1, H2, H3, H4</li>
+<li><strong>Don't:</strong> H2, H1, H3, H3</li>
+</ul>
+<h3 id="text-scaling">Text scaling</h3>
+<p>Test the UI with color correction, magnification, and other accessibility settings to ensure the layout works with assistive settings.</p>
+<h3 id="validate-forms-in-line">Validate forms in-line</h3>
+<p>Validate forms in-line so keyboard users don't have to navigate far to get feedback.</p>
+<h2 id="meaningful-text">Meaningful text</h2>
+<p>Consistent and helpful text makes the user interface accessible to users who use a screen reader. Screen readers help users with visual impairments by reading both visible and non-visible alternative text aloud.</p>
+<p>All text should support accessibility, whether it's visible (UI labels, headings, buttons, forms, hyperlinks, and help text) or non-visible (alternative text for images and buttons).</p>
+<h3 id="describe-what-an-element-does">Describe what an element does</h3>
+<p>Label elements with action verbs that indicate what happens when the element is selected.</p>
+<ul>
+<li><strong>Do:</strong> Edit Settings - When read aloud, the text indicates the action.</li>
+<li><strong>Don't:</strong> Settings - Just labeling the element doesn't let the user know what will happen when it is selected.</li>
+</ul>
+<p>In buttons, describe what the action does, and, if you can, reveal what will happen.</p>
+<ul>
+<li><strong>Do:</strong> Launch Game</li>
+<li><strong>Don't:</strong> Let's Go!</li>
+</ul>
+<p>Hyperlinks indicate where the user will go when they select the link.</p>
+<ul>
+<li><strong>Do:</strong> Learn more about Roll20</li>
+<li><strong>Don't:</strong> Read more</li>
+</ul>
+<h2 id="images">Images</h2>
+<p>Describe non-text elements in the UI or with alternative text so that screen readers can succinctly describe images and media.</p>
+<h3 id="images-that-contain-information">Images that contain information</h3>
+<p>If an image contains information that can only be understood by seeing the image, then you need to explain the content of the image using alternative text. Follow these guidelines when you write alt text:</p>
+<ul>
+<li>The text should be an adequate replacement for both the content and the function of the image.</li>
+<li>Determine the correct content and then deliver that message as succinctly as possible. Aim for no more than a few words, though sometimes a short sentence or two may be necessary.</li>
+<li>Don't repeat information that is contained in the text found on the page around the image.</li>
+<li>Don't use phrases like "image of ..." or "a photo of ..." to describe the image. This is apparent when using screen readers and the description itself should be enough to replace the meaning of the image.</li>
+<li>If the meaning and content of an image is conveyed by surrounding text, header, or captions, then you might not need as much alternative text.</li>
+</ul>
+<h3 id="decorative-images">Decorative images</h3>
+<p>If the image is used strictly to make the page pleasant to the eye, doesn't contain a link, and isn't used to deliver information, then include the alt attribute, but leave it empty. For example, <em>alt=""</em></p>
+<h2 id="colors">Colors</h2>
+<p>We comply with <a href="https://www.w3.org/TR/WCAG/">AA standard contrast ratios</a>. To do this, we choose primary, secondary, tertiary and extended colors that support usability. This ensures sufficient color contrast between elements so that users with low vision can see and use our products.</p>
+<h3 id="include-visual-cues">Include visual cues</h3>
+<p>Don't convey information using color alone. Use multiple visual cues, such as stroke weight, patterns, shape, text, or illustrations to ensure that all users receive the same information.</p>
+<p>This helps users who are unable to, or have difficulty with, distinguishing one color from another. This includes people who are color blind, have low vision, or are blind.</p>
+<h3 id="use-high-contrast">Use high contrast</h3>
+<p>High color contrast helps users who are partially or completely color-blind see differences between certain colors. It creates a strong visual hierarchy and improves usability for everyone.</p>
+<p>Decorative images and disabled states don't have contrast requirements.</p>
+<h2 id="testing-and-research">Testing and research</h2>
+<p>These guidelines will help improve accessibility in your applications, but they don't guarantee a fully accessible experience. We also recommend that you:</p>
+<ul>
+<li>Test the entire application and journeys using various assistive technologies and text scaling.</li>
+<li>Include users with impairments when testing.</li>
+<li>Ensure that the tasks in your applications can be accomplished by anyone, regardless of ability.</li>
+</ul>
+<p>When in doubt, refer to the following guidelines:</p>
+<ul>
+<li>WebAIM - <a href="http://webaim.org/">http://webaim.org/</a></li>
+<li>Web Accessibility Initiative - <a href="https://www.w3.org/">https://www.w3.org/</a></li>
+</ul>
+            
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3 border-left">
+          <div class="h-100 p-4">
+            <div data-toggle="sticky" data-sticky-offset="120">
+              <h6 class="mb-3">Summary</h6>
+              <ul class="section-nav">
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#accessibility">Accessibility</a>
+                      <ul>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#structure-hierarchy">Structure &amp; hierarchy</a>
+                      <ul>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#have-a-consistent-hierarchy">Have a consistent hierarchy</a>
+                            </li>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#text-scaling">Text scaling</a>
+                            </li>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#validate-forms-in-line">Validate forms in-line</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#meaningful-text">Meaningful text</a>
+                      <ul>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#describe-what-an-element-does">Describe what an element does</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#images">Images</a>
+                      <ul>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#images-that-contain-information">Images that contain information</a>
+                            </li>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#decorative-images">Decorative images</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#colors">Colors</a>
+                      <ul>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#include-visual-cues">Include visual cues</a>
+                            </li>
+                        
+                            <li class="toc-entry toc-h2">
+                              <a href="#use-high-contrast">Use high contrast</a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                
+                    <li class="toc-entry toc-h2">
+                      <a href="#testing-and-research">Testing and research</a>
+                      <ul>
+                        
+                        </ul>
+                    </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  MkDocs version      : 1.0.4
+  Docs Build Date UTC : 2019-07-30 19:56:35
+  -->
+
+  <!-- Purpose Scripts -->
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="../../assets/js/roll20.core.js"></script>
+  <!-- Docs JS -->
+  <script src="../../assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="../../assets/libs/clipboard/dist/clipboard.min.js"></script>
+  <!-- Purpose JS -->
+  <script src="../../assets/js/roll20.js"></script>
+</body>
+</html>

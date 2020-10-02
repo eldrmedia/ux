@@ -1,4 +1,4 @@
-baseURL = "https://design.roll20.net"
+baseURL = "https://uxconsulting-41d0e.web.app"
 languageCode = "en-us"
 title = "Roll20 Design System"
 theme = "designsystem"

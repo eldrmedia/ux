@@ -17,7 +17,7 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@master
       - name: Build Hugo
-        uses: lowply/build-hugo@v0.72.0
+        uses: lowply/build-hugo@v0.75.1
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:

@@ -1,9 +1,9 @@
 <header class="header header--transparent">
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="/images/logo-white.svg" />
-                Design System</a>
+                <img src="/images/logo-dark@2x.png" />
+                Blog
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -11,26 +11,8 @@
             <div class="collapse navbar-collapse" id="navbarLinks">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link{{ if eq .Page.Params.Directory "brand" }} active" aria-current="true{{ end }}" href="/brand">Brand</a>
+                        <a class="nav-link" href="http://www.eldrmedia.com/">Back to Main Site</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link{{ if eq .Page.Params.Directory "marketing" }} active" aria-current="true{{ end }}" href="/marketing/">Marketing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link{{ if eq .Page.Params.Directory "foundation" }} active" aria-current="true{{ end }}" href="/foundation/">Foundation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link{{ if eq .Page.Params.Directory "components" }} active" aria-current="true{{ end }}" href="/components/">Components</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link{{ if eq .Page.Params.Directory "patterns" }} active" aria-current="true{{ end }}" href="/patterns">Patterns</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link{{ if eq .Page.Params.Directory "resources" }} active" aria-current="true{{ end }}" href="/resources/">Resources</a>
-                    </li>
-                    <!-- <li class="nav-item align-self-center">
-                        <button id="theme-toggle" class="btn btn-sm btn-light">Switch to dark mode</button>
-                    </li> -->
                 </ul>
             </div>
         </div>

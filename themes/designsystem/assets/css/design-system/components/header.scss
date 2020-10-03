@@ -11,7 +11,7 @@
         @include media-breakpoint-down(md) {
 
             .navbar {
-                background-color: $secondary;
+                background-color: $dark;
 
                 // .nav-link {
                 //     color: $navbar-light-color;
@@ -50,11 +50,11 @@
             }
 
             img {
-                height: 40px;
+                height: 70px;
                 margin-right: 1rem;
 
                 @include media-breakpoint-down(sm) {
-                    height: 30px;
+                    height: 60px;
                     margin-right: .5rem;
                 }
             }

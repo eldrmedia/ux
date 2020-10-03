@@ -1,6 +1,6 @@
 baseURL = "https://uxconsulting-41d0e.web.app"
 languageCode = "en-us"
-title = "Roll20 Design System"
+title = "Eldr Media Blog"
 theme = "designsystem"
 
 # render unsafe html

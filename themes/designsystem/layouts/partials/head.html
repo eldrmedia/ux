@@ -19,19 +19,17 @@
     {{- end }}
 
     <meta name="author" content="{{ .Site.Author.name }}"/>
-    <link href='{{ "" | absLangURL }}/images/favicon.ico' rel='icon' type='image/x-icon'/>
 
     <meta property="og:url" content="{{ .URL | absLangURL }}" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <meta property="og:image" content='{{ "" | absLangURL }}/images/og-image.jpg' />
+    <meta property="og:image" content='http://www.eldrmedia.com/resources/images/preview.jpg' />
     <link rel="canonical" href="{{ .URL | absLangURL }}" />
 
     {{ "<!-- Main Stylesheet -->" | safeHTML }}
     {{ $roll20 := resources.Get "/css/roll20.scss" | toCSS | minify }}
     {{ $roll20_dark := resources.Get "/css/roll20-dark.scss" | toCSS | minify }}
-    <link rel="stylesheet" href="{{ $roll20_dark.Permalink }}" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="{{ $roll20.Permalink }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+    <link rel="stylesheet" href="{{ $roll20.Permalink }}">
 
     {{ $designsystem := resources.Get "/css/design-system.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $designsystem.Permalink }}" media="screen">

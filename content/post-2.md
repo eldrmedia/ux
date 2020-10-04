@@ -1,7 +1,9 @@
 +++
-description = "The all new blog source from you favorite UI Designer."
-draft = true
-layout = "home"
+description = "Blog Post 1"
+layout = "details"
 title = "Post-2"
 
 +++
+# Hello hello!
+
+This is blog post #2
